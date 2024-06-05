@@ -6,11 +6,45 @@ body {
     background: linear-gradient(to bottom, #E0BBE4, #957DAD, #D291BC);
 }
 
+/* Modo oscuro */
+body.dark-mode {
+    background: linear-gradient(to bottom, #1e1e1e, #3e3e3e, #5e5e5e);
+    color: #f1f1f1;
+}
+
+body.dark-mode header {
+    background: linear-gradient(to right, #333, #666);
+}
+
+body.dark-mode nav {
+    background: linear-gradient(to right, #444, #777);
+}
+
+body.dark-mode main {
+    background-color: rgba(50, 50, 50, 0.8);
+}
+
+body.dark-mode article {
+    background: linear-gradient(to right, #555, #777);
+}
+
+body.dark-mode section {
+    background: linear-gradient(to right, #444, #666);
+}
+
+body.dark-mode aside {
+    background: linear-gradient(to right, #555, #777);
+}
+
+body.dark-mode footer {
+    background: linear-gradient(to right, #333, #666);
+}
+
 /* Encabezado */
 header {
     background: linear-gradient(to right, #8E44AD, #C39BD3);
     color: white;
-    padding: -10px 0;
+    padding: 1em 0;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -20,8 +54,7 @@ header {
 }
 
 /* Botón de menú hamburguesa */
-.menu-toggle {
-    display: none;
+.menu-toggle, .mode-toggle {
     background-color: #6C3483;
     border: none;
     color: white;
@@ -29,8 +62,15 @@ header {
     font-size: 18px;
     position: absolute;
     top: 10px;
-    right: 10px;
     cursor: pointer;
+}
+
+.menu-toggle {
+    right: 10px;
+}
+
+.mode-toggle {
+    right: 50px;
 }
 
 /* Navegación */
@@ -66,6 +106,11 @@ nav a {
 nav a:hover {
     background-color: #ddd;
     color: black;
+}
+
+nav a:hover.dark-mode {
+    background-color: #444;
+    color: #f1f1f1;
 }
 
 /* Para evitar que el contenido se oculte detrás del menú fijo */
