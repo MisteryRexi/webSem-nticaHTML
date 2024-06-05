@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML Semántico con Menú Fijo</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Sitio Web Semántico</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="spacer"></div>
+    <div class="container">
+        <main>
+            <article>
+                <h2>Artículo 1</h2>
+                <p>Este es el contenido del primer artículo. Aquí puedes poner cualquier texto que desees.</p>
+            </article>
+            <article>
+                <h2>Artículo 2</h2>
+                <p>Este es el contenido del segundo artículo. Aquí puedes poner cualquier texto que desees.</p>
+            </article>
+        </main>
+        <aside>
+            <h2>Barra Lateral</h2>
+            <p>Este es el contenido de la barra lateral. Puedes usarlo para colocar enlaces, información adicional o cualquier cosa que desees.</p>
+        </aside>
+    </div>
+    <section>
+        <h2>Sección Adicional</h2>
+        <p>Este es el contenido de una sección adicional. Aquí puedes poner cualquier texto o información que desees.</p>
+    </section>
+    <footer>
+        <p>Sitio Web.</p>
+    </footer>
+    <!--Es lo mismo que escibir nav ul y nav ul:activate en css-->
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
