@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Semántico</title>
+    <title>Ejemplo de HTML Semántico con Menú Fijo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Mi Sitio Web Semántico</h1>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <button class="mode-toggle" onclick="toggleMode()">🌙</button>
+        <button id="toggle-theme" onclick="toggleDarkMode()">🌙</button>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
     <div class="spacer"></div>
     <div class="container">
         <main>
@@ -51,8 +42,15 @@
             nav.classList.toggle('active');
         }
 
-        function toggleMode() {
-            document.body.classList.toggle('dark-mode');
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle('dark-mode');
+            var themeToggle = document.getElementById('toggle-theme');
+            if (body.classList.contains('dark-mode')) {
+                themeToggle.textContent = '☀️';
+            } else {
+                themeToggle.textContent = '🌙';
+            }
         }
     </script>
 </body>

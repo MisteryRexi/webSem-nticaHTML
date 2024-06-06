@@ -1,0 +1,227 @@
+/* Estilos básicos para el cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #E0BBE4, #957DAD, #D291BC);
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(to right, #8E44AD, #C39BD3);
+  color: white;
+  padding: 0.5em 20px;
+  text-align: center;
+  position: fixed;
+  width: calc(100% - 40px);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Botón de menú hamburguesa */
+.menu-toggle {
+  background-color: #6C3483;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none; /* Oculto por defecto */
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Botón de cambio de tema */
+#toggle-theme {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.5s;
+  color: #6C3483;
+}
+
+/* Navegación */
+nav {
+  background: linear-gradient(to right, #6C3483, #AF7AC5);
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.5s, top 0.3s;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background 0.5s, color 0.5s;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Para evitar que el contenido se oculte detrás del menú fijo */
+.spacer {
+  height: 120px;
+}
+
+/* Estilo principal del contenido */
+main {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  flex: 3;
+  margin: 10px;
+  border-radius: 8px;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Artículos y secciones */
+article {
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #BB8FCE, #D7BDE2);
+  padding: 20px;
+  border-radius: 8px;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Sección adicional */
+section {
+  background: linear-gradient(to right, #F5EEF8, #EBDEF0);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Barra lateral */
+aside {
+  background: linear-gradient(to right, #D2B4DE, #E8DAEF);
+  padding: 20px;
+  flex: 1;
+  margin: 10px;
+  border-radius: 8px;
+  color: black; /* Texto negro en modo claro */
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Pie de página */
+footer {
+  background: linear-gradient(to right, #5B2C6F, #8E44AD);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* Contenedor */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+
+  nav ul li{
+      display: none; /* Ocultar menú por defecto en pantallas pequeñas */
+      flex-direction: column;
+      background: linear-gradient(to right, #6C3483, #AF7AC5);
+      padding-top: 10px;
+      position: absolute;
+      width: 100%;
+  }
+
+  nav ul.active {
+      display: flex; /* Mostrar menú cuando sea activo */
+  }
+
+  nav li {
+      width: 100%;
+  }
+
+  .container {
+      flex-direction: column;
+  }
+
+  aside {
+      order: -1;
+  }
+
+  nav {
+      top: 60px;
+  }
+
+  main {
+      padding-top: 100px;
+  }
+
+  nav a {
+      padding: 10px;
+  }
+}
+
+
+/* Modo oscuro */
+.dark-mode {
+  background: linear-gradient(to bottom, #3d3a33, #34312a) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode header {
+  background: linear-gradient(to right, #ebaa11, #990000) !important;
+}
+
+.dark-mode nav {
+  background: linear-gradient(to right, #4c0000, #ebaa11) !important;
+}
+
+.dark-mode main {
+  background-color: rgba(43, 43, 43, 0.8) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode article {
+  background: linear-gradient(to right, #ebaa11, #ae7e0c) !important;
+}
+
+.dark-mode section {
+  background: linear-gradient(to right, #a75d0e, #ebaa11) !important;
+}
+
+.dark-mode aside {
+  background: linear-gradient(to bottom, #ebaa11, #2b2b2b) !important;
+  color: rgb(243, 243, 243) !important; /* Texto negro */
+}
+
+.dark-mode footer {
+  background: linear-gradient(to right, #4c0000, #660000) !important;
+}
+
+.dark-mode a {
+  color: #ffcccc !important;
+}
+
